@@ -1,0 +1,32 @@
+// -----------------------------------------------------------------------------
+// Variables
+// -----------------------------------------------------------------------------
+@import "modules/_color-variables.scss";
+@import "modules/_color-classes.scss";
+@import "modules/_variables.scss";
+@import "modules/_mixins.scss";
+
+
+// -----------------------------------------------------------------------------
+// base and layout
+// -----------------------------------------------------------------------------
+@import "modules/_reset.scss";
+@import "modules/_layout.scss";
+@import "modules/_typography.scss";
+
+
+// -----------------------------------------------------------------------------
+// general and shame
+// -----------------------------------------------------------------------------
+@import "modules/_helper.scss";
+@import "modules/_scaffholding.scss";
+@import "modules/_shame.scss";
+
+
+// -----------------------------------------------------------------------------
+// components
+// -----------------------------------------------------------------------------
+@import "modules/_form.scss";
+@import "custom_modules/_navigation.scss";
+@import "custom_modules/_homeslide.scss";
+@import "custom_modules/_animations.scss";

@@ -1,0 +1,313 @@
+﻿.workSlider{
+    width:100%;
+    height:100%;
+    position:absolute;
+    background-color:#ccc;
+    display:block;
+    overflow-x:auto;
+
+    @media #{$medium-and-down} {
+        position:static;
+    }
+
+    ul{
+        width:100%;
+        height:100%;
+        background-color:red;
+        overflow:hidden;
+        display:flex;
+        @media #{$medium-and-down} {
+            overflow:auto;
+            display:block;
+        }
+    }
+    .workWrap{
+        width:100%;
+        height:100%;
+        background-color:red;
+        overflow:auto;
+        display:flex;
+        margin-left:0;
+        position:absolute;
+        @media #{$medium-and-down} {
+            position:static;
+            display:block;
+        }
+        li{         
+            background-color:#000;
+            height:100%;
+            width:100%;
+            display:inline-block;
+            flex-basis:auto;
+            flex-shrink:0;
+            background-position:fixed;
+            background-size:cover;
+            overflow:auto;
+            @media #{$medium-and-down} {
+                display:block;
+            }
+            &:nth-child(1){
+                box-shadow:inset 0px 0px 110px rgba(0,0,0,1);
+                background-image:url("../img/overthesurface.jpg");
+                .workCover{
+                    @media #{$medium-and-down} { 
+                       background-image:url("../img/overthesurface.jpg");
+                       background-size:cover;  
+                    
+                    } 
+                }
+                .workData{
+                    background-color:#183139;
+                }  
+                      
+            }
+            &:nth-child(2){
+                background-color:#fff; 
+                .workCover{
+                    @media #{$medium-and-down} { 
+                       background-image:url("../img/parallax_fall-cover.jpg");
+                       background-size:160%; 
+                       background-position:50% 65%;
+                       .canvas{
+                        display:none;
+                       }  
+                    
+                    } 
+                } 
+                .workData{
+                    background-color:#f1f3fa;
+                    .homeTxt{color:rgba(0,0,0,0.8);}
+                }
+                .mainTitle{
+                    color:rgba(0,0,0,0.8);
+                }             
+            }
+            &:nth-child(3){
+                background-image:url("../img/progettazione_cover_min.jpg");
+            }
+            .workCover{
+                width:100%;
+                height:100%;
+                display:flex;
+                align-items:flex-end;
+                background-position:center;
+                background-size:cover;
+                float:left;
+                position:relative;  
+                @media #{$medium-and-down} {       
+                    float:none;
+                    height:20rem;
+                    background-size:cover;
+                }             
+            }
+            .workData{
+                width:100%;
+                min-height:100%;
+                display:block;
+                background-color:#333;
+                float:left;
+                z-index:700;
+                position:relative;
+                padding:9rem 5rem 3rem 5rem;
+                box-sizing:border-box;
+
+                @media #{$medium-and-down} {       
+                    text-align:center;
+                    padding:10rem 2rem 3rem 2rem;
+                    float:none;
+                    background-color:#ccc;
+
+                }
+                }
+            }
+        }   
+    }
+// -------- art station preview
+$artstWidth:8rem;
+.artStationPr{
+    display:inline-block;
+    width:$artstWidth;  
+    text-align:center;
+    transition:all 0.3s;
+    color:rgba(255,255,255,0.5);
+    margin-top:1rem;
+    font-size:1.2rem;
+    >*{display:inline-block; margin-top:0.8rem;} 
+    img{
+        width:100%;
+        height:auto;
+        background-color:#000;
+        box-shadow:0px 0px 10px rgba(0,0,0,0.5);
+    }
+    @media #{$hover} {        
+        &:hover{
+            transform:scale(1.1);
+        }            
+    } 
+    @media #{$medium-and-down} {       
+        width:12rem;
+        margin-right:1rem;
+        margin-left:1rem;
+    }
+     
+    
+}
+// margini e interazioni
+.artStationPr +.artStationPr{
+    margin-left:2rem;
+    @media #{$medium-and-down} {       
+        margin-left:auto;
+    }
+}
+
+
+//------- workslider controlls
+.workSlControllsR, .workSlControllsL{
+    width:0;
+    height:100%;
+    position:fixed;
+    display:block;  
+}
+.workSlControllsR{
+    right:0;
+
+}
+.workSlControllsR{
+    left:0;
+    @media #{$medium-and-down} {
+      display:none;
+    }
+}
+.sectionIndex{
+    position:absolute;
+    top:30%;
+    left:0;
+    display:block;
+    width:auto;
+    margin-left:3rem;
+    min-width:20em;
+
+
+    li span{
+        transition:all 1.5s;
+        display:inline-block;
+        vertical-align:middle;
+        margin-right:0.5rem;
+        font-size:11px;
+        color:#fff;
+        &:first-child{
+            width:1.5rem;
+            height:1px;
+            background-color:#fff;
+        }
+        &:last-child{
+            display:none;
+        }
+    }
+    li.active span{
+        
+        &:first-child{
+            width:3.5rem;
+        }
+        &:last-child{
+            display:inline-block;
+        }
+    }
+    .fas{
+        color:#fff !important;
+        margin:0.5rem 0.5rem 0.5rem 0rem;
+        padding:1rem;
+        cursor:pointer;
+        border-radius:500px;
+        transition:all 0.5s;
+        &:hover{
+            box-shadow:0 0 10px #ccc;
+        }
+    }
+    .fa-chevron-left{
+        top:3rem;
+    } 
+}
+.glow{
+    position: absolute;
+    bottom:4.8rem;
+    right: 4.5rem;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow:
+        0 0 60px 30px rgba(255,255,255,0.7),
+        0 0 100px 60px rgba(255,255,255,0.4),
+        0 0 140px 90px rgba(0, 255, 255, 0.5);
+    transform:scale(0.25);
+    transform-origin: center;
+    animation: glow 1.5s ease-in-out infinite alternate;
+    transition:all 1s;
+    @media #{$medium-and-down} {
+      display:none;
+    }
+}
+.segui{
+    position:absolute;
+    bottom:4.2rem;
+    right:3.7rem;
+    font-size:11px;
+    color:#fff;
+    @media #{$medium-and-down} {
+      display:none;
+    }
+}
+@-webkit-keyframes glow {
+  from {
+    width:40px;
+    height:40px;
+    box-shadow:
+        0 0 60px 30px rgba(255,255,255,0.7),
+        0 0 100px 60px rgba(255,255,255,0.4),
+        0 0 140px 90px rgba(0, 255, 255, 0.5);
+  }
+  to {
+    width:30px;
+    height:30px;
+    box-shadow:
+        0 0 60px 50px rgba(255,255,255,0.7),
+        0 0 100px 80px rgba(255,255,255,0.4),
+        0 0 140px 110px rgba(0, 255, 255, 0.5);
+  }
+}
+.frameWrap{
+    width:100%;
+    position:fixed;
+    height:auto;
+    z-index:9999;
+}
+
+
+
+//------- home canvas
+.workSlider{
+   .image-container {
+      display: flex;
+      height: 100%;
+      max-width: 100%;
+      -webkit-perspective: 1500px;
+      perspective: 1500px;
+      transform-style: preserve-3d;
+      transform: translate3d(0, 0, 0);
+      position:relative;
+      margin:0 auto 0 auto;
+      padding-left:3rem;
+      @media #{$medium-and-down} {
+          padding-left:0rem;
+        }
+    }
+    .canvas {
+      width: auto;
+      max-width: 100%;
+      max-height: 100%;
+      display: block;
+      margin: auto;
+      
+    } 
+}

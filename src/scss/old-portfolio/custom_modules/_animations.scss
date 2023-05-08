@@ -1,0 +1,58 @@
+
+//Animation mixin setup
+@mixin keyframes($animation-name) {
+    @-webkit-keyframes #{$animation-name} {
+        @content;
+    }
+    @-moz-keyframes #{$animation-name} {
+        @content;
+    }  
+    @-ms-keyframes #{$animation-name} {
+        @content;
+    }
+    @-o-keyframes #{$animation-name} {
+        @content;
+    }  
+    @keyframes #{$animation-name} {
+        @content;
+    }
+}
+@mixin animation($str) {
+  -webkit-animation: #{$str};
+  -moz-animation: #{$str};
+  -ms-animation: #{$str};
+  -o-animation: #{$str};
+  animation: #{$str};      
+}
+
+
+/////////////////////////////////////////// main title
+// Define animation name, and properties
+@include keyframes(maintitle) {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+// Add animation to element
+.innerTitle {
+  @include animation('maintitle linear 0.5s 1 ');
+  &:after{ @include animation('maintitle 0.5s linear 0.3s 1 forwards')}
+}
+
+/////////////////////////////////////////// percentage
+
+@include keyframes(percentage) {
+  0% { width: 0%;}
+  100% { width: 100%;}
+}
+// Add animation to element
+.percentage >*:after {
+  @include animation('percentage 1.3s ease-in-out 0.2s 1 forwards');
+}
+
+
+
+
+
+
+
+

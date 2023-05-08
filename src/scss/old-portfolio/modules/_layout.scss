@@ -1,0 +1,84 @@
+﻿// -----------------------------------------------------------------------------
+// Wrapper e layout helper class
+// -----------------------------------------------------------------------------
+
+// wrapper
+%full-equal-padding{padding:1rem;}
+%lateral-padding-fluid{
+	padding-left:$global-lateralspace;
+	padding-right:$global-lateralspace;
+	@media only screen and (min-width: $small-and-down) {
+    	padding-left:$global-lateralspace-mob;
+		padding-right:$global-lateralspace-mob;
+  	}
+}
+.wrap2p{@extend %lateral-padding-fluid;}
+.wrap4p{padding:$global-space;}
+
+// -----------------------------------------------------------------------------
+// Grid
+// -----------------------------------------------------------------------------
+
+// creasting code to build classes
+%scol{
+	display:inline-flex;
+	flex-wrap:wrap;
+	box-sizing:border-box;	
+	padding-right:1rem;
+	padding-left:1rem;
+	@media only screen and (min-width: $small-and-down) {
+    	padding-left:$global-lateralspace-mob;
+		padding-right:$global-lateralspace-mob;
+  	}
+}
+%m6{
+	width:50%;
+	//background-color:rgba(0,0,0,0.1);
+	  @media #{$medium-and-down} {
+    	width:100%;
+    	//background-color:rgba(0,0,0,0.05);
+    	padding:0 $global-lateralspace;
+  	}
+}
+%s6{
+	width:50%;
+	//background-color:rgba(0,0,0,0.1);
+	  @media #{$small-and-down} {
+    	width:100%;
+    	//background-color:rgba(0,0,0,0.05);
+    	padding:0 $global-lateralspace;
+  	}
+}
+%-padding{
+	padding-left:4rem;
+	padding-right:4rem;
+	@media #{$medium-and-down} {
+    	padding-left:1.5rem;
+    	padding-right:1.5rem;
+  	}
+  	@media #{$small-and-down} {
+    	padding-left:0;
+    	padding-right:0;
+  	}
+}
+
+%srow{
+	display:flex; 
+	flex-wrap:wrap; 
+	margin-right:-1rem;
+	box-sizing:border-box;
+	overflow-x:hidden;	
+	width:100%;
+	align-items:flex-start;
+}
+
+// building the classes
+
+.srow{@extend %srow;}
+.srow-padding{@extend %srow; @extend %-padding;}
+.scol-m6{@extend %scol; @extend %m6;}
+.scol-s6{@extend %scol; @extend %s6;}
+
+
+
+

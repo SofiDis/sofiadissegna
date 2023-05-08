@@ -1,0 +1,68 @@
+// -----------------------------------------------------------------------------
+// Hepler class
+// -----------------------------------------------------------------------------
+
+// margin
+.mrgin-all{margin:$global-space;}
+.mrgin-lato{margin-left:$global-space; margin-right:$global-space;}
+.mrgin-alto{margin-top:$global-space; margin-bottom:$global-space;}
+
+// allignment
+.txt-right{text-align:right;}
+.txt-left{text-align:left;}
+.txt-center{text-align:center;}
+
+.txt-rightI{text-align:right !important;}
+.txt-leftI{text-align:left !important;}
+.txt-centerI{text-align:center !important;}
+
+
+// flex
+%flex-center{
+	display:flex;
+	justify-content:center;	
+	align-items:flex-start;
+	flex-wrap:wrap;	
+}
+%flex-between{
+	display:flex;
+	justify-content:space-between;	
+	align-items:flex-start;
+	flex-wrap:nowrap;
+}
+%flex-fullcenter{
+	display:flex;
+	flex-wrap:wrap;
+	align-items:center;
+	justify-content:center;
+	>*{
+		flex:auto 0 0;
+	}
+}
+.flex-center{@extend %flex-center;}
+.flex-between{@extend %flex-between;}
+.fullcenter{@extend %flex-fullcenter;}
+
+
+// float class
+.floatleft{float:left;}
+.floatright{float:right;}
+.clearall{clear:all;}
+
+
+
+
+
+// test class
+.showit1{background-color:#f8f8f8;}
+.showit2{background-color:#ddd;}
+.showit3{background-color:#ccc;}
+
+.colorit1{background-color:#394D59;}
+.colorit2{background-color:#68828C;}
+.colorit3{background-color:#C1D4D9;}
+.colorit4{background-color:#F2EFE9;}
+.colorit5{background-color:#0D0D0D;}
+
+
+

@@ -1,0 +1,46 @@
+{
+  "name": "basic-react",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@react-spring/web": "^9.7.2",
+    "@types/animejs": "^3.1.7",
+    "animejs": "^3.2.1",
+    "lodash": "^4.17.21",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "6"
+  },
+  "devDependencies": {
+    "@types/node": "^18.0.3",
+    "@types/react": "^18.0.28",
+    "@types/react-dom": "^18.0.11",
+    "@typescript-eslint/eslint-plugin": "^5.28.0",
+    "@typescript-eslint/parser": "^5.28.0",
+    "@vitejs/plugin-react": "^3.1.0",
+    "eslint": "^8.19.0",
+    "eslint-config-prettier": "^8.5.0",
+    "jsdom": "^20.0.0",
+    "postcss": "^8",
+    "postcss-html": "^1.4.1",
+    "prettier": "^2.7.1",
+    "sass": "~1.32.12",
+    "stylelint": "^14.8.2",
+    "stylelint-config-html": "^1.0.0",
+    "stylelint-config-prettier-scss": "^0.0.1",
+    "stylelint-config-recommended": "^8.0.0",
+    "stylelint-config-recommended-scss": "^6.0.0",
+    "stylelint-config-standard-scss": "^4.0.0",
+    "stylelint-order": "^5.0.0",
+    "stylelint-scss": "^4.2.0",
+    "stylelint-selector-bem-pattern": "^2.1.1",
+    "typescript": "^4.9.3",
+    "vite": "^4.2.0"
+  }
+}
